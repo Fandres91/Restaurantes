@@ -1,0 +1,252 @@
+/**reseteo universal*/
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*media query para el responsibe */
+/*el !!screen and!! se coloca cuando se este visualizando en una pantalla o_o ---> @media Iscreen and (min-width:1081px)*/
+@media screen and (min-width: 1081px){/*cuando el tamaño del navegador es mayor a 1081px se aplican 
+
+los siguiente estilos*/
+
+		header h1{/* esta es la img de bextlan*/
+			text-align: right;
+			width: 35%;
+		}
+				
+}
+
+@media screen and (max-width: 1080px){
+	
+	
+	
+	form{
+		width: 95%;/*el ancho del 100% original va a pasar al 95%*/
+	}
+	#indicador-menu{
+		display: none;/*desaparece el elemento*/
+	}
+	article#servicio1-metodologia
+	{
+		width: 95%;
+		margin-bottom: 1em;
+	}
+	article#servicio1-metodologia
+	{
+		width: 60%;
+		margin-bottom: 1em;
+	}
+@media only screen and (max-width: 970px){
+	
+
+	/* Mobile Nav Menu */
+
+
+	#navigation .nav-menu{
+	display:none;
+	height: auto;
+	top:100%;
+	left:0;
+	width:100%;
+	position: absolute;
+	background:rgba(255, 255, 255, 0.97) !important;
+	box-shadow: 0px 1px 4px rgba(0,0,0, 0.1);
+
+}
+
+	#navigation ul.nav li
+	{
+	display:inline-block;
+	height:auto;
+	width:100%;
+	}
+
+	#navigation ul.nav li a
+	{
+	display:block;
+	height: auto;
+	width:100%;
+	padding:0 20px;
+	color: #555555;
+	border-top:1px solid #fff;
+	line-height: 40px;
+	padding-right: 
+	}
+
+	#navigation ul.nav li a:hover,
+	#navigation ul.nav li.active a
+	{
+	border-top:1px solid #fff;
+
+	}
+	article#servicio1-icontec
+	{
+		width: 40%;
+	}	
+	.respuesta
+	{
+		width: 31%;
+	}
+	article#servicio1-objetivos
+	{
+		width: 95%;
+	}
+	article#servicio1-objetivos, article#servicio2-objetivos
+	{
+		width: 75%;
+		margin-bottom: 1em;
+	}
+	
+
+}
+
+@media screen and (max-width: 800px){
+
+	#navigation{
+	padding:0 5px;
+	height: 55px;}
+
+	.nav-logo a.logo img{
+  	height: 35px;}
+
+  	.nav-logo {
+	top: 0%;
+	-webkit-transform: translateY(-55%);
+	-moz-transform: translateY(-55%);
+	transform: translateY(-55%);}
+	
+	article#galeria-inicio{
+		width: 88%;
+	}
+	#img-servicios, article#nuestros-servicios, article#servicio1, section#principal,article#servicio1-metodologia,aside{
+		display: block;/*visualización en bloque, van a ocupar todo el ancho posible*/
+		margin: 0 0 .25em 0;/*0 arriva, izquierda, derecha y abajo .25em para que no se vean pegados*/
+		width: 95%;
+
+	}
+	/*como los section se les da padding etc. es decir ocupan mas espacio que la imagen, pues a la 
+
+imagen se le da su 98%*/
+
+	#img-servicios{
+		width: 98%;
+	}
+	/*como los article de servicio 2 3 les sobra espacio a los lados se anchan mas*/
+	article#servicio2, article#servicio3,article#servicio4{
+		width: 95%;
+	}
+	section#trabajos{
+		max-width: 95%;
+	}
+	div.portafolio article {
+		padding: 2em;
+	}
+	section#contacto, section#mapa{
+		display: block;
+		width: 95%;
+	}
+	section#contacto{
+		margin-bottom: .2em;
+	}
+	form{
+		width: 100%;
+	}
+		nav#menu-peque {
+			display: inline-table;
+		}
+	article#servicio2-metodologia{
+		width: 95%;
+	}
+	img#sesion
+	{
+		  padding: 1px 0px;
+	}
+	.panel-metodologia
+	{
+		min-width: 84%;
+	}
+
+}
+/*tablet o smarphone*/
+@media screen and (max-width: 600px){
+	
+	section#principal, article#descripcion-acerca, article#servicio2,article#servicio3{
+		margin-bottom: 1em;
+
+		/*evita que se pegue con lo de abajo- es un espacio de 2em---> nos da una separacion en la seccion acerca entre vision y la imagen-video*/
+
+	}
+
+	section#principal, aside, article#descripcion-acerca, article#multimedia-acerca,article#servicio2, article#servicio3{
+		display: block;
+		margin: auto;
+		width: 95%;
+		margin-bottom: 0.2em;
+
+	}
+	article#servicio4 
+	{
+		width: 95%;
+		margin-bottom: 1em;
+		
+	}
+
+	#img-servicios{
+		display: none;/*desaparece el elemento*/
+	}
+	div.portafolio article{
+		display: block;
+		margin: .5em auto;
+		padding: 0;
+	}
+	#ajustar{
+		font-size: 0.80em;
+	}
+	/*aca se le da al menu pequeño que contiene editor, formato de descarga.. un espacio entre el article y este*/
+	nav#menu-peque{
+		margin-bottom: 0.60em;
+
+	}
+	section#principal
+	{
+		margin-bottom: 1em;
+	}
+	
+	#animated_div
+	{
+		padding-right: 0em;
+	}
+	article#servicio1-icontec
+	{
+		width: 90%;
+	}
+	.respuesta
+	{
+		width: 70%;
+	}
+	img.img-texto
+{
+  width: 50%;
+  height: 50%;
+}
+article#articul1, #articul2
+{
+	width: 95%;
+}
+article#servicio1-objetivos,article#servicio2-objetivos
+	{
+		width: 95%;
+	}
+	
+	article#servicio1-metodologia
+	{
+		width: 95%;
+	}
+	#header-metodologia
+	{
+		position: absolute;
+		top: 15em;
+	}
+}

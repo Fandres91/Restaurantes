@@ -1,0 +1,393 @@
+@font-face {
+    font-family: "Futura";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/EndOfAnthropocene-Regular.woff") format("woff"), 
+    url("/fonts/EndOfAnthropocene-Regular.ttf") format("truetype"),
+    url("/fonts/EndOfAnthropocene-Regular.svg") format('svg');
+}
+
+h1, .fontFutura
+{
+  font-family: Futura !important;
+}
+span.tamaño
+{
+	 background-color: rgba(0, 0, 0, 0.6);
+	 width: 70%;
+	 text-align: center;
+	 margin-top: 0.5em;
+	 border-radius: 0.5em;
+	 color: #fff !important;
+	 padding-bottom: 0.5em;
+	 
+}
+.contenido
+{
+	box-shadow: 5px 5px 5px #888888 ;
+	border-radius: 0.5em;
+}
+.contenido1, .contenido2
+{	
+	border-radius: 0.5em;
+	vertical-align: top;
+	display: inline-block;
+	width: 20%;
+	background: #fff;
+	margin-bottom: 1em;
+	
+
+}
+.contenido2
+{
+	vertical-align: top;
+	display: inline-block;
+	width: 30%;
+
+}
+.contenido3
+{	border-radius: 0.5em;
+	background: #fff;
+	text-align: center;
+	margin: 0px auto;
+	width: 80%;
+	box-shadow: 5px 5px 5px #888888 ;
+}
+.contenido4 , .contenido5
+
+{	border-radius: 0.5em;
+	display: inline-block;
+	vertical-align: top;
+	background: #fff;
+	text-align: center;
+	margin: 0px auto;
+	width: 40%;
+	margin: 0px auto;
+	box-shadow: 5px 5px 5px #888888 ;
+}
+.contenido4
+{	
+	padding-right: 3em;
+}
+.imgrestaurante
+{
+	width: 200px;
+}
+.imagen
+{
+	width: 300px;
+}
+/*--------------------------
+--------- PRELOADER --------
+--------------------------*/
+#preloader {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff; /* change if the mask should have another color then white */
+  z-index:1001; /* makes sure it stays on top */
+  }
+
+#status {
+  width:100%;
+  height:400px;
+  position:absolute;
+  left:0%; /* centers the loading animation horizontally one the screen */
+  top:15%; /* centers the loading animation vertically one the screen */
+  background-image:url(../img/preload.gif); /* path to your loading animation */
+  background-repeat:no-repeat;
+  background-position:center;
+  /*margin:-100px 0 0 -100px;*/ /* is width and height divided by two */
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  }
+  /*-------------- ANIMACIÓN DE ROTACIÓN----
+  @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}*/
+
+
+		.row > section,
+		.row > article
+		{
+			margin-bottom: 0;
+		}
+
+	/* Images */
+	#imagen_logo
+	{
+		background-color: rgba(249, 249, 249, 0.64);
+		padding: 1em;
+		border-radius: 0.5em;
+		width: 25%;
+		object-position: center;
+		z-index: 1000;
+		-webkit-box-shadow: inset 11px 10px 28px -2px rgba(0,0,0,0.75);
+		-moz-box-shadow: inset 11px 10px 28px -2px rgba(0,0,0,0.75);
+		box-shadow: inset 11px 10px 28px -2px rgba(0,0,0,0.75);
+	}
+
+
+		.image
+		{
+			display: inline-block;
+		}
+		
+			.image img
+			{
+				display: block;
+				width: 100%;
+			}
+
+			.image.featured
+			{
+				display: block;
+				width: 100%;
+				margin: 0 0 2em 0;
+			}
+			
+			.image.full
+			{
+				display: block;
+				width: 100%;
+				margin: 0 0 2em 0;
+			}
+			
+			.image.left
+			{
+				float: left;
+				margin: 0 2em 2em 0;
+			}
+			
+			.image.centered
+			{
+				display: block;
+				margin: 0 0 2em 0;
+			}
+
+				.image.centered img
+				{
+					margin: 0 auto;
+					width: auto;
+				}
+		.img-eventos
+
+		{
+			width: 70px;
+			height: 70px;
+		}
+
+	/* Lists */
+
+		ul.default
+		{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+			ul.default li
+			{
+				padding: 0.60em 0em;
+				border-top: 1px solid;
+				border-color: rgba(255,255,255,.1);
+			}
+			
+			ul.default li:first-child
+			{
+				padding-top: 0;
+				border-top: none;
+			}
+			
+			ul.default a
+			{
+				text-decoration: none;
+				color: rgba(255,255,255,.5);
+			}
+			
+			ul.default a:hover
+			{
+				text-decoration: underline;
+			}
+			
+		ul.style {
+		}
+		
+		ul.style li {
+			margin: 0;
+			padding: 2em 0em 1.5em 0em;
+			border-top: 1px solid #ECECEC;
+		}
+		
+		ul.style li:first-child
+		{
+			padding-top: 0;
+			border-top: none;
+		}
+		
+		ul.style img {
+			float: left;
+			margin-right: 20px;
+		}
+		
+		ul.style p {
+		}
+		
+		ul.style .posted {
+			padding: 0em 0em 1em 0em;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-size: 8pt;
+			color: #A2A2A2;
+		}
+		
+		ul.style .first {
+			padding-top: 0px;
+			border-top: none;
+		}
+							
+
+	/* Buttons */
+		
+		.button
+		{
+			position: relative;
+			display: inline-block;
+			margin-top: 2em;
+			padding: 0.90em 1.5em;
+			background: #e95d3c;
+			border-radius: 40px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1.1em;
+			color: #FFF;
+			-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			cursor: pointer;
+		}
+
+			.button:hover
+			{
+				background: #de3d27;
+				color: #FFF !important;
+			}
+/*********************************************************************************/
+/* Background fondo color negro                                                  */
+/*********************************************************************************/
+.fondo-negro
+{
+	background:#333;
+	 box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
+}
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		position: relative;
+		background: #2a2f27 url(../images/banner.jpg) no-repeat;
+		background-size: cover;
+
+	}
+
+	#logo
+	{
+	}
+	
+	#nav
+	{
+	}
+
+		#nav ul
+		{
+			margin: 0;
+		}
+	
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		position: relative;
+		background: #333;
+		color: #fff;
+	}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+		position: relative;
+		background: #fff;
+	}
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/
+	
+	#featured
+	{
+		position: relative;
+		background: #f2f2f2;
+	}
+	
+	#featured h2
+	{
+		display: block;
+		margin-bottom: 2em;
+		font-size: 1.4em;
+	}
+	
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+	
+	#footer
+	{
+		position: relative;
+		background: #1d1d1d;
+	}
+	
+	#footer h2
+	{
+		display: block;
+		color: #FFF;
+	}
+	
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+	
+	#copyright
+	{
+		position: relative;
+		padding: 3em 0em;
+		letter-spacing: 1px;
+		text-align: center;
+		color: rgba(255,255,255,.2);
+	}
+	
+	#copyright .container
+	{
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: rgba(255,255,255,.3);
+	}	

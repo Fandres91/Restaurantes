@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>GoodFood</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS
+================================================== -->
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../../css/semilleros.css">
+  <link rel="stylesheet" type="text/css" href="../../css/style.css">
+  <!-- Favicons
+================================================== -->
+<link rel="shortcut icon" type="image/x-icon" href="../../hydra.ico"/>
+  <!-- JS
+================================================== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+    <script src=" http://maps.google.com/?file=api&v=2.x&key=AIzaSyDou7v6Yl5zKwHRZWVTDpreZ9NsZPLJuCE"
+    type="text/javascript"></script>
+
+    <!-- CÓDIGO PARA PASAR A script_optima ==================================================-->
+    <script type="text/javascript">
+
+      var map;
+      var gdir;
+      var pos;
+      var geocoder = null;
+         function load() {
+            if (GBrowserIsCompatible()) {
+              
+               map = new GMap2(document.getElementById("map"));   
+               gdir = new GDirections(map, document.getElementById("direcciones"));
+               GEvent.addListener(gdir, "load", onGDirectionsLoad);
+         GEvent.addListener(gdir, "error", mostrarError);  
+
+               obtenerRuta("San Gil, Santander", "carne brava");   
+            }
+         }
+            
+      function obtenerRuta(desde, hasta) {
+         
+          
+               gdir.load("from: " + desde + " to: " + hasta,
+      { "locale": "es", "travelMode" : G_TRAVEL_MODE_DRIVING });
+            
+      }
+         
+         function onGDirectionsLoad(){ 
+            //resumen de tiempo y distancia
+            document.getElementById("getDistance").innerHTML =gdir.getSummaryHtml(); 
+         } 
+         
+         function mostrarError(){
+             if (gdir.getStatus().code == G_GEO_UNKNOWN_ADDRESS)
+             alert("No se ha encontrado una ubicación geográfica que se corresponda con la dirección especificada.");
+             else if (gdir.getStatus().code == G_GEO_SERVER_ERROR)
+             alert("No se ha podido procesar correctamente la solicitud de ruta o de códigos geográficos, sin saberse el motivo exacto del fallo.");
+             else if (gdir.getStatus().code == G_GEO_MISSING_QUERY)
+             alert("Falta el parámetro HTTP q o no tiene valor alguno. En las solicitudes de códigos geográficos, esto significa que se ha especificado una dirección vacía.");
+            else if (gdir.getStatus().code == G_GEO_BAD_KEY)
+             alert("La clave proporcionada no es válida o no coincide con el dominio para el cual se ha indicado.");
+             else if (gdir.getStatus().code == G_GEO_BAD_REQUEST)
+             alert("No se ha podido analizar correctamente la solicitud de ruta.");
+             else alert("Error desconocido.");
+          
+         }
+    </script>
+<!-- CARGAR ==================================================-->  
+<script>
+   window.onload=load;
+   window.onunload=GUnload;
+</script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+ <!-- Preloader los estilos estan style.css  y el script en plugin.js-->
+      <div id="preloader">
+        <div id="status">&nbsp;</div>
+      </div>
+<!-- ================================= 
+ MENU PRINCIPAL  navbar-fixed-top
+=================================-->
+
+<nav class="navbar navbar-default " style="background: #fff">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../../index.html">
+       <LEFT><img class=" d-block" alt="Brand" src="../../img/food.png"></LEFT> 
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+
+        
+        <li><a href="#anuncios" style="color: black"><span class="glyphicon glyphicon-user"></span>SESIÓN</a></li>
+        
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</br></br>
+<!-- ================================= 
+ Panel del logo del semillero
+=================================-->
+
+
+<!-- ================================= 
+Panel contenido misión 
+=================================-->
+<div id="mision" class="contenido text-center">
+<article class="contenido1">
+  <h2>CARNE BRAVA</h2>
+  <!--<p><em>We love music!</em></p>-->
+  <p>Comida de Mar</p>
+  <p>Calle 3 # 5-28</p>
+  <p>Telefono: 314 567 8976</p>
+</article>
+<article class="contenido2">
+  <img src="../../img/pesca.jpg" class="imgrestaurante">
+</article>
+
+
+</div>
+
+<!-- ================================= 
+Panel contenido misión 
+=================================-->
+
+<article class="contenido3">
+  <h2>RESEÑA</h2>
+  <!--<p><em>We love music!</em></p>-->
+  <p>Comidas tipicas Santandereanas</p>
+ 
+</article>
+<center>
+<article class="contenido4">
+  <h3>HORARIOS</h3>
+  <a href="#arti1" data-toggle="collapse">
+  <p>HOY 12:00 - 15:00</p>
+  </a>
+  <div id="arti1" class="collapse">
+        <ul class="list-group text-justify">
+        
+          <li class="list-group-item ">Lunes 12:00 - 15:00</li>
+        
+          <li class="list-group-item">Martes 12:30 - 15:00</li>
+          
+        </ul>
+      </div>
+
+
+
+</article>
+
+<article class="contenido5">
+  <h3>MEDIOS DE PADO</h3>
+  <img src="../../img/pagos.png" class="imagen">
+  
+</article>
+</br> </br>
+</center>
+ <!-- ================================= 
+     CONTENIDO DE GOOGLE MAPS 
+     =================================-->   
+    <article data-role="content" class="contenido3"> 
+
+      <div id="inicio" class="principal ancho"> 
+      </br>
+       <center> <h3> UBICACIÓN</h3>
+      
+      
+        <!-- FORMULARIO PARA INGRESO DE DIRECCIÓN Y ELECCIÓN DEL TIPO DE TRAYECTO ==================================================-->  
+
+
+      <form action="#" name="form_ruta" onsubmit="obtenerRuta(this.desde.value, this.hasta.value); return false" class="ui-field-contain">
+
+               <label> Desde</label>
+               
+                 <input type="text" size="25" id="desde" name="desde" value="San Gil, Santander" type="search"/>
+              </br>
+                <label>Hasta</label>
+                 <input type="text" size="25" id="hasta" name="hasta" value="carne brava" />
+            </br> </br>
+            
+              <input data-inline="true" name="ruta" type="submit" value="Obtener ruta" />
+            </center>
+      </form>
+      </center>
+
+     </br>
+
+      <center>
+        <table class="tablaMap">
+           <tr>
+              <td>
+                 <strong>    </strong>
+              </td>
+           </tr>
+           <tr>
+              <td valign="top">
+              <center>
+                <!-- MAPA ==================================================-->  
+                 <div id="map" class="mapa"></div>
+              </center>
+              </td>
+           </tr>
+
+           <tr>
+              <td>
+                 <strong>Direcciones de la ruta</strong>
+              </td>
+           </tr>
+           <tr>
+              <td valign="top">
+                <!-- DISTANCIA Y TIEMPO AÚN SIN FUNCIONAR ==================================================-->  
+                 Distancia y tiempo: <div id="getDistance"></div>
+                 <div id="direcciones" style="width: 95%"></div>
+              </td>
+           </tr>
+        </table>
+      </center>
+
+
+      </div> 
+    </article>
+
+</div>
+
+<!-- ================================= 
+Proyectos de investigacion 
+=================================-->
+<footer></footer>
+ 
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+<!-- ================================= 
+ Script del preload
+=================================-->
+<script type="text/javascript">
+   $(window).load(function() { // makes sure the whole site is loaded
+      $('#status').fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+      $('body').delay(350).css({'overflow':'visible'});
+    });
+</script>
+
+</body>
+</html>
